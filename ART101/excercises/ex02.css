@@ -1,0 +1,29 @@
+p { color : rgb(244, 40, 135); font-size: large; font-weight: bold;} 
+
+p strong {font-weight: bold;}
+
+li { text-align: normal;}
+
+html { font-family: "Mystery Quest"; background-color:  rgb(140, 209, 249); }
+
+li { color : pink; background-color: black }
+
+h1 { color : pink; background-color: black}
+
+
+
+/* select all html tages that have a highlight_01 */
+.highlight_01 {background-color: rgb(247, 145, 214);}
+
+.highlight_02 {background-color: rgb(209, 178, 209);}
+
+.highlight_03 {background-color: rgb(236, 226, 226);}
+
+#pink-small {width: 100px}
+#pink-med {width: 200px}
+#pink-lar {width: 300px}
+
+
+.test-div { background: lemonchiffon; margin: 30px; padding: 40px }
+
+.my-flex{ display:flex; }
