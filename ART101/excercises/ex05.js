@@ -10,7 +10,7 @@ colorCount=count-1;
   $("#needy-button").html( "Clicks: " + count + " Color: " + colors[colorCount] );
    $("body").css("background-color", colors[colorCount]);
    
-   if (count==0) { 
+   if (count==o) { 
         count=0;  
         console.log("it happened");
     }
