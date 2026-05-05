@@ -1,0 +1,118 @@
+html, body{
+    
+    margin:0%;
+}
+
+body{
+  
+  
+  
+    background-image: ("pur");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    min-height: 100vh;
+}
+
+/* seperate rules BELOW */ 
+
+    video{ width: 400px;
+        display:block;
+    margin: 0 auto;}
+
+   h1 { color : rgb(235, 237, 78); background-color: rgb(7, 52, 32)
+}
+
+    p { color : rgb(244, 230, 40); font-size: large; font-weight: bold; background-color: rgb(3, 43, 12);
+    } 
+    
+
+
+
+    #main-zone {
+        display: flex;
+        justify-content: center;
+        gap: 45px;
+        margin-top: 20px;
+    }
+
+    #main-zone img {width: 300px;}
+    .my-flex{ display:flex; }
+
+
+    #rules-button {
+  font-size: 25px;
+  padding: 12px 20px;
+  background-color: #f77409;   
+  color: rgb(18, 18, 138);
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+#rules-button:hover {
+  background-color: #16f35c; }
+
+  #output p {
+  margin: 5;
+}
+.rules-box {
+  background-color: rgb(21, 1, 1);
+  padding: 10px;
+  margin-top: 10px;
+  border: 5px solid #00ffcc;
+}
+
+.rule-item {
+  color: #18edf8;  
+  font-weight: bold;
+  padding: 5px 0;
+}
+
+.rules-box h3 {
+  color: #00ff3c;  /* change to any color you want */
+}
+
+#rules-button {
+  margin-top: 100px;   /* space ABOVE button */
+  margin-bottom: 20px; /* space BELOW button */
+}
+
+
+#avoid-button {
+    font-size: 24px;
+  margin-top: 15px;
+  padding: 12px 20px;
+  background-color: #c85ab6;
+  color: rgb(29, 217, 60);
+  border: none;
+  border-radius: 8px;
+}
+
+#avoid-button:hover {
+  background-color: #16f35c; }
+
+  #output p {
+  margin: 5;
+}
+
+.avoid-box {
+  margin-top: 15px;
+  padding: 10px;
+  border: 2px solid #ff0033;
+  background-color: black;
+}
+
+.avoid-box h3 {
+  color: #ff0033;
+}
+
+.avoid-img {
+  width: 150px;
+  margin: 10px;
+}
+
+button {
+  display: block;
+  margin: 10px 0;
+}
