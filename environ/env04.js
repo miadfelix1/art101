@@ -27,6 +27,10 @@ let avoidImages = [
 ]
 
 $("#rules-button").click(function () {
+    if ($(".rules-box").length) {
+        $(".rules-box").remove();
+        return;
+    }
   let message = "<div class='rules-box'><h3>Environment Rules:</h3>";
 
   for (let i = 0; i < environmentRules.length; i++) {
@@ -40,6 +44,11 @@ $("#rules-button").click(function () {
 
 
 $("#avoid-button").click(function () {
+
+    if ($(".avoid-box").length) {
+        $(".avoid-box").remove();
+        return;
+    }
   let message = "<div class='avoid-box'><h3>What To Avoid</h3>";
 
   for (let i = 0; i < avoidImages.length; i++) {
@@ -49,4 +58,45 @@ $("#avoid-button").click(function () {
   message += "</div>";
 
   $("#output").append(message);
+});
+
+let phrases = [
+  "Penance, penance, penance. Pray for sinners",
+  "The Immaculate will conquer, through us, the whole world and every single soul",
+  "The rosary is the weapon for these times.",
+  "The Mother asks not for perfection, only openness."
+];
+
+let phraseIndex = 0;
+
+$("#saint-image").click(function () {
+
+  if (phraseIndex >= phrases.length) {
+    $(".text-box").hide();
+    phraseIndex = 0;
+    return;
+  }
+
+  $(".text-box").show();
+
+  let currentPhrase = phrases[phraseIndex];
+
+  $(".text-box").text("");
+
+  let i = 0;
+
+  let typing = setInterval(function () {
+
+    $(".text-box").append(currentPhrase[i]);
+
+    i++;
+
+    if (i >= currentPhrase.length) {
+      clearInterval(typing);
+    }
+
+  }, 50);
+
+  phraseIndex++;
+
 });

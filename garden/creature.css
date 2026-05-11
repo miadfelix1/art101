@@ -1,0 +1,34 @@
+#creature-form {
+   background: #99d68c;
+   padding: 20px;
+   margin: 50px;
+}
+
+#creature-form DIV {
+   margin-bottom: 20px;
+}
+
+#creature-list {
+   display: flex;
+   flex-wrap: wrap;
+   gap: 20px;
+   margin: 50px;
+}
+
+#creature-list>DIV {
+   background: rgb(204, 37, 65);
+   width: 100px;
+   height: 100px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+#crAdd:hover {
+  background-color: #eba063; }
+
+  #output p {
+  margin: 5;
+}
+
+html {background-color: rgb(110, 107, 178);}
