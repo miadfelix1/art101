@@ -68,8 +68,11 @@ let phrases = [
 ];
 
 let phraseIndex = 0;
+let typing = null;
 
 $("#saint-image").click(function () {
+
+  clearInterval(typing);
 
   if (phraseIndex >= phrases.length) {
     $(".text-box").hide();
@@ -85,7 +88,7 @@ $("#saint-image").click(function () {
 
   let i = 0;
 
-  let typing = setInterval(function () {
+  typing = setInterval(function () {
 
     $(".text-box").append(currentPhrase[i]);
 
@@ -98,5 +101,52 @@ $("#saint-image").click(function () {
   }, 50);
 
   phraseIndex++;
+
+});
+
+let tokenFollowing = false;
+
+$("#token").click(function () {
+
+  tokenFollowing = !tokenFollowing;
+
+});
+
+$(document).mousemove(function (event) {
+
+  if (tokenFollowing) {
+
+    $("#token").css({
+      position: "absolute",
+      left: event.pageX + "px",
+      top: event.pageY + "px"
+    });
+
+    let token = $("#token");
+    let computer = $("#computer");
+
+    let tokenOffset = token.offset();
+    let computerOffset = computer.offset();
+
+    let touching =
+      tokenOffset.left < computerOffset.left + computer.width() &&
+      tokenOffset.left + token.width() > computerOffset.left &&
+      tokenOffset.top < computerOffset.top + computer.height() &&
+      tokenOffset.top + token.height() > computerOffset.top;
+
+    if (touching) {
+
+      tokenFollowing = false;
+
+      token.animate({
+        left: computerOffset.left + 80,
+        top: computerOffset.top + 80,
+        width: "20px",
+        opacity: 0
+      }, 500);
+
+    }
+
+  }
 
 });
